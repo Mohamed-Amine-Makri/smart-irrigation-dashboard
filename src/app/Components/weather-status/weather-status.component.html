@@ -1,0 +1,24 @@
+<div class="card weather-card">
+    <div class="card-body">
+      <h5 class="card-title">Météo d'Aujourd'hui</h5>
+      <div class="weather-info">
+        <div class="weather-icon">
+          <i class="fas {{ getWeatherIcon() }} fa-3x"></i>
+        </div>
+        <div class="weather-details">
+          <p class="weather-status">{{ weatherStatus }}</p>
+          <p class="temperature">{{ temperature }}°C</p>
+        </div>
+      </div>
+      <div class="weather-stats">
+        <div class="stat">
+          <i class="fas fa-tint"></i>
+          <span>{{ humidity }}%</span>
+        </div>
+        <div class="stat">
+          <i class="fas fa-wind"></i>
+          <span>{{ windSpeed }} km/h</span>
+        </div>
+      </div>
+    </div>
+  </div>

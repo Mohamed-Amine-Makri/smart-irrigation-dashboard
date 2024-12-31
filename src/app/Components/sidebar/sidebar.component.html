@@ -1,0 +1,51 @@
+<div class="sidebar" [ngClass]="{'collapsed': collapsed}">
+  <div class="sidebar-header">
+    <div class="logo">
+      <img src="assets/farms.png" alt="Smart Irrigation Logo">
+    </div>
+    <button class="toggle-btn" (click)="onToggleSidebar()" aria-label="Toggle Sidebar">
+      <i class="bi" [ngClass]="{'bi-chevron-left': !collapsed, 'bi-chevron-right': collapsed}"></i>
+    </button>
+  </div>
+
+  <nav>
+    <ul>
+      <li>
+        <a routerLink="/dashboard">
+          <i class="bi bi-speedometer2"></i> 
+          <span class="menu-text">Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/farms">
+          <i class="bi bi-tree"></i>
+          <span class="menu-text">Gestion des fermes</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/sensors">
+          <i class="bi bi-cpu"></i>
+          <span class="menu-text">Données des capteurs</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/weather">
+          <i class="bi bi-cloud-sun"></i>
+          <span class="menu-text">Rapports météo</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/calendar">
+          <i class="bi bi-calendar3"></i>
+          <span class="menu-text">Calendrier d'irrigation</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/settings">
+          <i class="bi bi-gear"></i>
+          <span class="menu-text">Paramètres utilisateur</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>

@@ -1,0 +1,164 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  height: 98.8%;
+  background-color: var(--color-light);
+  padding: 20px;
+  position: relative;
+  transition: width 0.3s ease, padding 0.3s ease;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 20px;
+}
+
+.sidebar.collapsed {
+  width: 80px;
+  padding: 20px 10px;
+}
+
+.sidebar .logo {
+  text-align: center;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+.sidebar.collapsed .logo img {
+  width: 50px;
+  transition: width 0.3s ease;
+}
+
+.sidebar .logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+.sidebar nav ul li {
+  margin: 10px 0;
+  position: relative;
+  border-bottom: 1px solid #aeadad;
+  padding-bottom: 10px;
+}
+
+/* Remove border from the last item */
+.sidebar nav ul li:last-child {
+  border-bottom: none;
+}
+
+/* Styles for collapsed state */
+.sidebar.collapsed nav ul li {
+  border-bottom: 1px solid #aeadad;
+  padding-bottom: 10px;
+}
+
+.sidebar.collapsed nav ul li:last-child {
+  border-bottom: none;
+}
+
+.sidebar nav ul li a {
+  text-decoration: none;
+  color: var(--color-dark);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, padding 0.3s ease, color 0.3s ease;
+}
+
+/* Adjust padding and layout for collapsed state */
+.sidebar.collapsed nav ul li a {
+  padding: 10px 0;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar nav ul li a:hover {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+.sidebar nav ul li a i {
+  font-size: 1.5rem;
+  width: 24px;
+  text-align: center;
+  transition: font-size 0.3s ease, margin 0.3s ease;
+}
+
+/* Adjust icon size and margin for collapsed state */
+.sidebar.collapsed nav ul li a i {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.sidebar nav ul li a .menu-text {
+  white-space: nowrap;
+  opacity: 1;
+  transition: opacity 0.3s ease, font-size 0.3s ease, height 0.3s ease;
+}
+
+.sidebar.collapsed nav ul li a .menu-text {
+  opacity: 0;
+  font-size: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* Toggle Button */
+.toggle-btn {
+  position: fixed;
+  top: 93px;
+  right: -15px;
+  left: 251px;
+  transform: translateY(-50%);
+  background: var(--color-primary);
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: left 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  z-index: 1002;
+  overflow: hidden;
+  padding: 0;
+}
+
+.toggle-btn i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar.collapsed .toggle-btn {
+  left: 82px;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #F1F8E9;
+  margin-left: 15px;
+}

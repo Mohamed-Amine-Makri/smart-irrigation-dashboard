@@ -1,0 +1,98 @@
+.dashboard-container {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: var(--color-light);
+  margin: 12px;
+  height:100%;
+}
+
+
+
+
+.farms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+
+
+
+.farm-count {
+  text-align: right;
+  padding: 20px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .farms-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.farm-card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(214, 12, 12, 0.1);
+}
+
+.carousel-inner {
+  padding: 1rem;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+  opacity: 0.8;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #000;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.card-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .card-group {
+    flex-direction: column;
+  }
+}
+
+.dashboard-container {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: var(--color-light);
+  margin: 12px;
+  height: 100%;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.alert {
+  margin: 20px 0;
+  border-radius: 20px;
+  padding: 15px;
+}
+
+
+
+
+
+

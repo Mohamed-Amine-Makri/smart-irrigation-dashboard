@@ -1,0 +1,105 @@
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: var(--color-light);
+  color: white;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.app-header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Buttons in Header Actions */
+.header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.header-actions .btn {
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.header-actions .btn-primary {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+.header-actions .btn-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-dark);
+}
+
+.header-actions .btn-info {
+  background-color: var(--color-secondary);
+  color: var(--color-dark);
+  padding: 0.5rem;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-actions .btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.header-actions .btn-info i {
+  font-size: 1.2rem;
+}
+
+/* Toggler Button */
+.btn-toggler {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s, transform 0.3s;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+.btn-toggler:hover {
+  color: var(--color-light);
+  transform: rotate(90deg);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .header-actions {
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .header-actions .btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .header-actions .btn-info {
+    width: 36px;
+    height: 36px;
+  }
+}

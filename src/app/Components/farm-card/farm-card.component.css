@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700&subset=latin-ext');
+
+:host {
+  font-family: 'Quicksand', sans-serif;
+  display: block;
+  height: 100%;
+}
+
+.card {
+  height: 300px; /* Fixed height */
+  width: 300px;  /* Fixed width */
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-body {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.card-text:last-child {
+  margin-bottom: 0;
+}
+
+.news-date {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  display: inline-block;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.news-date__title {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.news-date__txt {
+  font-size: 0.9rem;
+}
+
+.news__img {
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  height: 150px;
+  margin-top: 15px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.news__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .news__img img {
+  transform: scale(1.05);
+}
